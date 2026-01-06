@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-jsx';
-import 'prismjs/themes/prism-tomorrow.css';
+
 
 export default function Usage() {
   const codeLines = [

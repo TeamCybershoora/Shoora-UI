@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-jsx';
-import 'prismjs/themes/prism-tomorrow.css';
+
 import { GridDistortion } from "@cybershoora/shoora-ui";
 
 export default function Usage() {

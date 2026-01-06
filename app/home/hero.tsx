@@ -2,9 +2,28 @@
 import { motion } from "framer-motion";
 import { Hyperspeed,LiquidEther } from "@cybershoora/shoora-ui";
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
   const router = useRouter();
+  const [webGLError, setWebGLError] = useState(false);
+
+  useEffect(() => {
+    // Check if WebGL is supported
+    const checkWebGL = () => {
+      try {
+        const canvas = document.createElement('canvas');
+        const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        return gl && gl instanceof WebGLRenderingContext;
+      } catch (e) {
+        return false;
+      }
+    };
+
+    if (!checkWebGL()) {
+      setWebGLError(true);
+    }
+  }, []);
 
   const handleBrowseComponents = () => {
     router.push('/docs/getstarted/index');
@@ -35,24 +54,28 @@ export default function Hero() {
         />
       </div> */}
       <div className="absolute inset-0 w-full h-full">
-      <LiquidEther
-        colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
-        mouseForce={20}
-        cursorSize={100}
-        isViscous={false}
-        viscous={30}
-        iterationsViscous={32}
-        iterationsPoisson={32}
-        resolution={0.5}
-        isBounce={false}
-        autoDemo={true}
-        autoSpeed={0.5}
-        autoIntensity={2.2}
-        takeoverDuration={0.25}
-        autoResumeDelay={3000}
-        autoRampDuration={0.6}
-      />
-    </div>
+        {webGLError ? (
+          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-blue-900/20" />
+        ) : (
+          <LiquidEther
+            colors={[ '#5227FF', '#FF9FFC', '#B19EEF' ]}
+            mouseForce={20}
+            cursorSize={100}
+            isViscous={false}
+            viscous={30}
+            iterationsViscous={32}
+            iterationsPoisson={32}
+            resolution={0.5}
+            isBounce={false}
+            autoDemo={true}
+            autoSpeed={0.5}
+            autoIntensity={2.2}
+            takeoverDuration={0.25}
+            autoResumeDelay={3000}
+            autoRampDuration={0.6}
+          />
+        )}
+      </div>
 
       {/* 💫 Hero Content */}
       <div className="relative flex flex-col items-center justify-center -mt-8">

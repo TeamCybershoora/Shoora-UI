@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-tsx';
-import 'prismjs/themes/prism-tomorrow.css';
+
 
 interface CodeProps {
   className?: string;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Prism from 'prismjs';
 import 'prismjs/components/prism-bash';
-import 'prismjs/themes/prism-tomorrow.css';
+
 
 const packageManagers = [
   { id: 'pnpm', name: 'pnpm', command: 'pnpm add @shoora-ui/split-text' },
