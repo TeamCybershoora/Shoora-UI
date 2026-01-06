@@ -39,7 +39,7 @@ export default function Page() {
           <h3 className="text-lg font-medium text-purple-200 mb-1">Split text</h3>
           <p className="text-sm text-purple-200/60 mb-4">Smooth text animations</p>
           <div className="h-28 bg-black/30 rounded flex items-center justify-center">
-            <div className="w-full h-full flex items-center justify-center ml-30">
+            <div className="w-full h-full flex items-center justify-center p-20 ml-10">
               <SplitText 
                 text="Hello" 
                 splitType="chars"
@@ -169,7 +169,7 @@ export default function Page() {
           <h3 className="text-lg font-medium text-purple-200 mb-1">Star Border</h3>
           <p className="text-sm text-purple-200/60 mb-4">An attractive border</p>
           <div className="h-28 bg-black/30 rounded flex items-center justify-center">
-            <div className="w-full h-full flex items-center justify-center ml-25">
+            <div className="w-full h-full flex items-center justify-center p-5 ml-20">
              <StarBorder
         as="button"
         className="custom-class"
@@ -219,7 +219,7 @@ export default function Page() {
           <h3 className="text-lg font-medium text-purple-200 mb-1">Glass Icons</h3>
           <p className="text-sm text-purple-200/60 mb-4">Check with hover </p>
           <div className="h-28 bg-black/30 rounded flex items-center justify-center">
-            <div className="w-full h-full flex items-center justify-center ml-25 mb-10">
+            <div className="w-full h-full flex items-center justify-center p-2 ml-20 mb-14">
              <GlassIcons items={items} className="custom-class"/>
             </div>
           </div>

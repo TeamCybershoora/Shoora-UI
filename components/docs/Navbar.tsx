@@ -31,7 +31,7 @@ export default function Navbar({ onSearch, searchQuery }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 w-full flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg  flex items-center justify-center -ml-30">
+          <div className="w-8 h-8 rounded-lg  flex items-center justify-center -ml-20">
             <img src={logo} alt="Shoora UI" className="w-5 h-5" />
           </div>
           <span className="text-white font-bold text-xl ">Shoora UI</span>
@@ -69,7 +69,7 @@ export default function Navbar({ onSearch, searchQuery }: NavbarProps) {
 
           {/* GitHub Button */}
           <a
-            href="https://github.com/cybershoora/shoora-ui"
+            href="https://github.com/TeamCybershoora/shoora-ui"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 border border-white/20 hover:border-white/40 text-sm text-white rounded-md px-4 py-2 hover:bg-white/5 transition-colors"
