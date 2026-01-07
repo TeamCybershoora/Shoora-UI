@@ -1,5 +1,9 @@
-import "./styles.css";
+"use client";
+import "./globals.css";
 import Navbar from "../components/Navbar";
+// app/layout.tsx
+
+
 
 export default function RootLayout({
   children,
